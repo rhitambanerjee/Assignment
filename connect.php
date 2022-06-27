@@ -1,5 +1,5 @@
 <?php
-$con=new mysqli('localhost','root','','demo');
+$con=new mysqli('remotemysql.com','IzFXDuZjQr','bUkaHqBBgl','IzFXDuZjQr');
 
 if(!$con){
    die(mysqli_error($con));
