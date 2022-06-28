@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
    $sql="insert into `information` (location,matchcount,timetaken,milestravelled,fuelused,numbervehicles,registrationid) values('$location','$matchcount','$timetaken','$milestravelled','$fuelused','$numbervehicles','$registrationid')";
    $result=mysqli_query($con,$sql);
    if($result){
-      header('location:display.php');
+      header('location:index.php');
    }
    else{
       die(mysqli_error($con));
