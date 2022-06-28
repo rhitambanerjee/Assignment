@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
    $sql="insert into `information` (location,matchcount,timetaken,milestravelled,fuelused,numbervehicles,registrationid) values('$location','$matchcount','$timetaken','$milestravelled','$fuelused','$numbervehicles','$registrationid')";
    $result=mysqli_query($con,$sql);
    if($result){
-      header('location:index.php');
+      header('location:display.php');
    }
    else{
       die(mysqli_error($con));
@@ -43,27 +43,27 @@ if(isset($_POST['submit'])){
          </div>
          <div class="form-group">
          <label>match_count</label>
-         <input type="text" class="form-control" placeholder="Enter match count" name="matchcount" autocomplete="off">
+         <input type="number" class="form-control" pattern="[0-9]+" placeholder="Enter match count" name="matchcount" autocomplete="off">
          </div>
          <div class="form-group">
          <labe>time_taken(s)</label>
-         <input type="text" class="form-control" placeholder="Enter time taken" name="timetaken" autocomplete="off">
+         <input type="number" class="form-control" pattern="[0-9]+" placeholder="Enter time taken" name="timetaken" autocomplete="off">
          </div>
          <div class="form-group">
          <label>miles_travelled</label>
-         <input type="text" class="form-control" placeholder="Enter miles travelled" name="milestravelled" autocomplete="off">
+         <input type="number" class="form-control" pattern="[0-9]+" placeholder="Enter miles travelled" name="milestravelled" autocomplete="off">
          </div>
          <div class="form-group">
          <label>fuel_used</label>
-         <input type="text" class="form-control" placeholder="Enter fuel used" name="fuelused" autocomplete="off">
+         <input type="number" class="form-control" pattern="[0-9]+" placeholder="Enter fuel used" name="fuelused" autocomplete="off">
          </div>
          <div class="form-group">
          <label>number_vehicles</label>
-         <input type="text" class="form-control" placeholder="Enter number vehicles" name="numbervehicles" autocomplete="off">
+         <input type="number" class="form-control" pattern="[0-9]+" placeholder="Enter number vehicles" name="numbervehicles" autocomplete="off">
          </div>
          <div class="form-group">
          <label>registration_id</label>
-         <input type="text" class="form-control" placeholder="Enter registration id" name="registrationid" autocomplete="off">
+         <input type="number" class="form-control" pattern="[0-9]+" placeholder="Enter registration id" name="registrationid" autocomplete="off">
          </div>
          <button type="submit" class="btn btn-primary" name="submit">Submit</button>
       </form>
